@@ -1,7 +1,9 @@
-import { getProfile } from "@/lib/content";
+import WorkGrid from "@/components/WorkGrid";
+import { getProfile, getProjects } from "@/lib/content";
 
 export default function Home() {
   const profile = getProfile();
+  const projects = getProjects();
 
   return (
     <main className="content" id="main">
@@ -19,6 +21,8 @@ export default function Home() {
           <span>Scroll &darr;</span>
         </div>
       </section>
+
+      <WorkGrid projects={projects} />
     </main>
   );
 }

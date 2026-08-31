@@ -179,3 +179,67 @@ body {
 @keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(5px); } }
 @media (prefers-reduced-motion: reduce) { .scrollcue span { animation: none; } }
 
+/* ------------------------------------------------------------- work grid */
+.work { padding: clamp(50px, 10vh, 110px) var(--pad) 0; }
+.work-inner { max-width: 1120px; margin: 0 auto; }
+.section-head { max-width: 660px; margin-bottom: clamp(34px, 6vh, 60px); }
+.section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+.section-head h2 {
+  margin-top: 16px; font-weight: 300; letter-spacing: -0.022em; line-height: 1.1;
+  font-size: clamp(26px, 4.4vw, 42px);
+}
+.section-head p { margin-top: 15px; color: var(--cream-dim); line-height: 1.65; font-size: 15px; }
+
+.work-grid { display: grid; gap: clamp(16px, 2vw, 22px); grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); }
+
+.wcard {
+  position: relative; display: flex; flex-direction: column;
+  padding: clamp(24px, 2.8vw, 32px);
+  background: var(--glass); border: 1px solid var(--line); border-radius: 20px;
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 24px 60px -44px rgba(0, 0, 0, 0.9);
+  overflow: hidden; transition: border-color 0.3s ease, transform 0.3s ease;
+}
+/* accent hairline along the top edge */
+.wcard::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--dot, var(--accent)) 22%, var(--dot, var(--accent)) 78%, transparent);
+  opacity: 0.5; transition: opacity 0.3s ease;
+}
+.wcard:hover { border-color: rgba(190, 214, 240, 0.26); transform: translateY(-3px); }
+.wcard:hover::before { opacity: 1; }
+
+.wcard .meta {
+  display: flex; flex-wrap: wrap; gap: 10px; align-items: baseline;
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--cream-faint);
+}
+.wcard .meta .org { color: var(--dot, var(--accent)); }
+.wcard h3 {
+  margin-top: 14px; font-size: clamp(22px, 2.8vw, 27px); font-weight: 400;
+  letter-spacing: -0.022em; line-height: 1.15;
+}
+.wcard h3 a { color: inherit; text-decoration: none; }
+.wcard h3 a::after { content: ""; position: absolute; inset: 0; }
+.wcard:hover h3 a { color: var(--dot, var(--accent)); }
+.wcard .blurb { margin-top: 13px; color: var(--cream-dim); font-size: 14.5px; line-height: 1.65; }
+
+.wmetrics {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 22px;
+  padding-top: 20px; border-top: 1px solid var(--line-soft);
+}
+.wmetrics > div:only-child { grid-column: span 2; }
+.wmetrics .v { font-size: 19px; font-weight: 300; letter-spacing: -0.025em; color: var(--cream); }
+.wmetrics .k {
+  margin-top: 5px; font-family: var(--mono); font-size: 9px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--cream-faint);
+}
+.wcard .foot { margin-top: auto; padding-top: 22px; }
+.wcard .more {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--dot, var(--accent)); text-decoration: none;
+}
+.wcard .more span { transition: transform 0.25s ease; }
+.wcard:hover .more span { transform: translateX(4px); }
+
