@@ -1,0 +1,18 @@
+[
+  {
+    "group": "Languages",
+    "items": ["Go", "TypeScript", "Python", "Rust", "SQL", "Bash"]
+  },
+  {
+    "group": "Systems & Data",
+    "items": ["PostgreSQL", "Kafka", "Redis", "ClickHouse", "gRPC", "Elasticsearch"]
+  },
+  {
+    "group": "Infrastructure",
+    "items": ["Kubernetes", "Terraform", "AWS", "Docker", "GitHub Actions", "OpenTelemetry"]
+  },
+  {
+    "group": "Frontend",
+    "items": ["React", "Next.js", "Tailwind CSS", "Vite", "Playwright"]
+  }
+]

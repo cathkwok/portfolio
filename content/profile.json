@@ -1,0 +1,21 @@
+{
+  "name": "Cathy Kwok",
+  "initials": "CK",
+  "role": "Software Engineer",
+  "tagline": "I build backend systems and developer tools that stay fast as they grow.",
+  "location": "San Francisco, CA",
+  "email": "hello@example.com",
+  "available": true,
+  "availabilityNote": "Open to senior backend & platform roles",
+  "bio": [
+    "I'm a software engineer focused on distributed systems, developer experience, and the unglamorous infrastructure that makes product teams fast. Most of my work lives at the seam between data and the people querying it.",
+    "Lately I've been spending time on incremental build systems, query observability, and making local development feel like production without the cost. I care a lot about tools that fail loudly, degrade gracefully, and explain themselves.",
+    "Outside of work I maintain a couple of small open-source libraries, mentor early-career engineers, and take unreasonably long walks to think through problems I couldn't solve at a desk."
+  ],
+  "links": [
+    { "label": "GitHub", "href": "https://github.com/", "handle": "@cathykwok" },
+    { "label": "LinkedIn", "href": "https://linkedin.com/in/", "handle": "in/cathykwok" },
+    { "label": "Email", "href": "mailto:hello@example.com", "handle": "hello@example.com" }
+  ],
+  "resumeUrl": ""
+}
