@@ -243,3 +243,130 @@ body {
 .wcard .more span { transition: transform 0.25s ease; }
 .wcard:hover .more span { transform: translateX(4px); }
 
+/* ---------------------------------------------------------------- timeline */
+.timeline { padding: clamp(60px, 12vh, 130px) var(--pad) 0; }
+.tl-intro { max-width: 660px; margin: 0 auto clamp(48px, 9vh, 96px); text-align: center; }
+.tl-intro h2 {
+  margin-top: 18px; font-weight: 300; letter-spacing: -0.02em; line-height: 1.1;
+  font-size: clamp(26px, 4.6vw, 44px);
+}
+.tl-intro p { margin-top: 16px; color: var(--cream-dim); font-size: clamp(14px, 1.9vw, 16px); line-height: 1.65; }
+
+.spine { position: relative; max-width: 1040px; margin: 0 auto; padding-bottom: 40px; }
+/* the vertical current the cards hang off */
+.spine::before {
+  content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 1px;
+  transform: translateX(-0.5px) scaleY(0); transform-origin: top;
+  background: linear-gradient(180deg, transparent, var(--line) 6%, var(--line) 94%, transparent);
+  transition: transform 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.spine.in::before { transform: translateX(-0.5px) scaleY(1); }
+
+.entry {
+  position: relative; display: grid; align-items: center;
+  grid-template-columns: 1fr 64px 1fr;
+  margin-bottom: clamp(28px, 5vh, 52px);
+  opacity: 0; transform: translateY(26px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.entry.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .entry { opacity: 1; transform: none; transition: none; }
+  .spine::before { transform: translateX(-0.5px) scaleY(1); transition: none; }
+}
+.entry.right .card { grid-column: 3; grid-row: 1; }
+.entry.right .side { grid-column: 1; grid-row: 1; text-align: right; }
+.entry.left .card  { grid-column: 1; grid-row: 1; }
+.entry.left .side  { grid-column: 3; grid-row: 1; text-align: left; }
+
+/* node on the spine */
+.entry::after {
+  content: ""; position: absolute; left: 50%; top: 50%;
+  width: 9px; height: 9px; margin: -4.5px 0 0 -4.5px; border-radius: 50%;
+  background: var(--ink); border: 1px solid var(--dot, var(--accent));
+  box-shadow: 0 0 0 4px rgba(5, 8, 14, 0.9), 0 0 16px -2px var(--dot, var(--accent));
+  transition: transform 0.4s ease;
+}
+.entry.in::after { transform: scale(1); }
+
+.side {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--cream-faint); padding: 0 22px; white-space: nowrap;
+}
+
+.card {
+  position: relative; padding: clamp(20px, 2.6vw, 28px);
+  background: var(--glass); border: 1px solid var(--line); border-radius: 18px;
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 24px 60px -40px rgba(0, 0, 0, 0.9);
+  transition: border-color 0.3s ease, transform 0.3s ease, background 0.3s ease;
+}
+.card:hover { border-color: rgba(190, 214, 240, 0.26); transform: translateY(-2px); }
+.card .where {
+  display: flex; flex-direction: column; gap: 3px; margin-bottom: 12px;
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--cream-faint);
+}
+.card .where .org { color: var(--dot, var(--accent)); }
+.card h3 {
+  font-size: clamp(19px, 2.5vw, 24px); font-weight: 400; letter-spacing: -0.015em; line-height: 1.2;
+}
+.card h3 a { color: inherit; text-decoration: none; }
+.card h3 a::after { content: ""; position: absolute; inset: 0; border-radius: 18px; }
+.card h3 a:hover { color: var(--dot, var(--accent)); }
+.card .blurb { margin-top: 10px; color: var(--cream-dim); font-size: 14.5px; line-height: 1.62; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 15px; }
+.tags b {
+  font-family: var(--mono); font-weight: 400; font-size: 10.5px; letter-spacing: 0.1em;
+  padding: 4px 9px; border-radius: 999px;
+  border: 1px solid var(--line); color: var(--cream-dim); background: rgba(190, 214, 240, 0.035);
+}
+.links-row { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 16px; position: relative; z-index: 1; }
+.links-row a {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--cream-dim); text-decoration: none; border-bottom: 1px solid var(--line-soft); padding-bottom: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.links-row a:hover { color: var(--dot, var(--accent)); border-color: var(--dot, var(--accent)); }
+.card .more {
+  display: inline-flex; align-items: center; gap: 7px; margin-top: 16px;
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--dot, var(--accent)); text-decoration: none;
+}
+.card .more span { transition: transform 0.25s ease; }
+.card:hover .more span { transform: translateX(4px); }
+
+/* "promoted" connector between a role and the one below it at the same company */
+.promo {
+  position: relative; display: grid; place-items: center;
+  margin: -14px 0 calc(clamp(28px, 5vh, 52px) - 14px);
+}
+.promo .mark {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--cream-faint); background: var(--ink); padding: 4px 12px; border-radius: 999px;
+  border: 1px solid var(--line-soft);
+}
+.promo .mark i {
+  width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent;
+  border-bottom: 6px solid var(--accent); opacity: 0.85;
+}
+
+.older {
+  text-align: center; margin: clamp(34px, 7vh, 72px) 0;
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.34em; text-transform: uppercase;
+  color: var(--cream-faint);
+}
+
+@media (max-width: 780px) {
+  .spine::before { left: 13px; }
+  .entry { grid-template-columns: 1fr; padding-left: 40px; margin-bottom: 26px; }
+  .entry.right .card, .entry.left .card { grid-column: 1; grid-row: auto; }
+  .entry.right .side, .entry.left .side {
+    grid-column: 1; grid-row: auto; text-align: left; padding: 0 0 8px; order: -1;
+  }
+  .entry::after { left: 13px; top: 12px; margin-top: 0; }
+  .promo { justify-items: start; padding-left: 40px; margin: -8px 0 18px; }
+}
+

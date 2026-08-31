@@ -1,9 +1,13 @@
+import Reveal from "@/components/Reveal";
+import Timeline from "@/components/Timeline";
 import WorkGrid from "@/components/WorkGrid";
-import { getProfile, getProjects } from "@/lib/content";
+import { getEducation, getJobs, getProfile, getProjects } from "@/lib/content";
 
 export default function Home() {
   const profile = getProfile();
   const projects = getProjects();
+  // The spine is the career itself; projects get their own grid above it.
+  const path = [...getJobs(), ...getEducation()].sort((a, b) => a.order - b.order);
 
   return (
     <main className="content" id="main">
@@ -23,6 +27,10 @@ export default function Home() {
       </section>
 
       <WorkGrid projects={projects} />
+
+      <Timeline entries={path} />
+
+      <Reveal />
     </main>
   );
 }
