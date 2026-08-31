@@ -5,7 +5,7 @@ slug: prime-now-sde
 title: "Software Development Engineer, Prime Now Mobile"
 org: "Amazon"
 location: "Seattle, WA"
-dateLabel: "Aug 2016 – Feb 2018"
+dateLabel: "Aug 2016 – Mar 2018"
 sideLabel: "2016 – 2018"
 blurb: "Led a cross-team project adding variable-weight item support to the Prime Now Android app."
 tags: ["Android", "Mobile"]

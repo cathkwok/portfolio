@@ -5,7 +5,7 @@ slug: aws-marketing-sdm
 title: "Software Development Manager, AWS Marketing Website Engineering"
 org: "Amazon"
 location: "Seattle, WA"
-dateLabel: "Nov 2019 – Jul 2021"
+dateLabel: "Dec 2019 – Jun 2021"
 sideLabel: "2019 – 2021"
 blurb: "Led a 9-person frontend team maintaining aws.amazon.com and built an analytics library adopted across the company."
 tags: ["Frontend", "Web platform"]

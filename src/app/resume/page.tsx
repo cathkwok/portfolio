@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import PrintButton from "@/components/PrintButton";
 import {
   getEducation,
-  getJobs,
   getProfile,
   getProjects,
+  getResumeJobs,
   getSkills,
 } from "@/lib/content";
 
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function Resume() {
   const profile = getProfile();
-  const jobs = getJobs();
+  const jobs = getResumeJobs();
   const projects = getProjects();
   const education = getEducation();
   const skills = getSkills();

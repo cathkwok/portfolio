@@ -1,5 +1,5 @@
 ---
-order: 10
+order: 17
 kind: education
 slug: ubc
 title: "B.S., Combined Computer Science and Biology"

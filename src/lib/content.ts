@@ -36,6 +36,10 @@ export type Entry = {
   html: string;
   /** Entries with a body get their own page at /work/[slug]. */
   hasDetail: boolean;
+  /** Whether this shows on /resume. Defaults true; set false to keep an entry
+   *  in the full career timeline without bloating the concise resume view
+   *  (e.g. student internships from a decade-plus back). */
+  resume: boolean;
 };
 
 export type Profile = {
@@ -91,6 +95,7 @@ export const getTimeline = cache((): Entry[] => {
         highlights: (data.highlights ?? []) as string[],
         html: body ? (marked.parse(body, { async: false }) as string) : "",
         hasDetail: body.length > 0,
+        resume: data.resume !== false,
       } satisfies Entry;
     });
 
@@ -108,6 +113,9 @@ export const getFeatured = cache((): Entry[] =>
 
 export const getJobs = cache((): Entry[] => getTimeline().filter((e) => e.kind === "job"));
 export const getEducation = cache((): Entry[] => getTimeline().filter((e) => e.kind === "education"));
+
+/** Full-time roles only — leaves early-career internships out of the printable resume. */
+export const getResumeJobs = cache((): Entry[] => getJobs().filter((e) => e.resume));
 
 export const getDetailEntries = cache((): Entry[] => getTimeline().filter((e) => e.hasDetail));
 
