@@ -1,21 +1,20 @@
 {
   "name": "Cathy Kwok",
   "initials": "CK",
-  "role": "Software Engineer",
-  "tagline": "I build backend systems and developer tools that stay fast as they grow.",
-  "location": "San Francisco, CA",
-  "email": "hello@example.com",
+  "role": "Engineering Manager, Applied AI",
+  "tagline": "I build engineering teams and the AI tools they ship. Currently leading applied GenAI and developer tooling at Amazon.",
+  "location": "Seattle, WA",
+  "email": "cathykwok13@gmail.com",
   "available": true,
-  "availabilityNote": "Open to senior backend & platform roles",
+  "availabilityNote": "Open to senior engineering leadership roles",
   "bio": [
-    "I'm a software engineer focused on distributed systems, developer experience, and the unglamorous infrastructure that makes product teams fast. Most of my work lives at the seam between data and the people querying it.",
-    "Lately I've been spending time on incremental build systems, query observability, and making local development feel like production without the cost. I care a lot about tools that fail loudly, degrade gracefully, and explain themselves.",
-    "Outside of work I maintain a couple of small open-source libraries, mentor early-career engineers, and take unreasonably long walks to think through problems I couldn't solve at a desk."
+    "Engineering leader with 12 years in tech and 8 years building teams. I've scaled consumer platforms from experiment to hyperscale — 300M+ monthly users at IMDb — and today lead applied GenAI and developer tooling at Amazon, where the org I built took an internal AI documentation platform to roughly 40% of the company's knowledge workers.",
+    "I stay hands-on. Most of my own building happens in a terminal: agentic architectures, agent-to-agent orchestration, evals, and the degradation instrumentation that keeps LLM features honest in production. I think the most useful thing a manager can do right now is keep enough of a practice to know what's actually hard.",
+    "Before this: identity and trust at Affirm, aws.amazon.com, grocery fulfillment for the Amazon Fresh launch, and a caller-ID Android app with 5M downloads."
   ],
   "links": [
-    { "label": "GitHub", "href": "https://github.com/", "handle": "@cathykwok" },
-    { "label": "LinkedIn", "href": "https://linkedin.com/in/", "handle": "in/cathykwok" },
-    { "label": "Email", "href": "mailto:hello@example.com", "handle": "hello@example.com" }
+    { "label": "LinkedIn", "href": "https://linkedin.com/in/cathy-kwok", "handle": "in/cathy-kwok" },
+    { "label": "Email", "href": "mailto:cathykwok13@gmail.com", "handle": "cathykwok13@gmail.com" }
   ],
   "resumeUrl": ""
 }

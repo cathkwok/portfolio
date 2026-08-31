@@ -1,18 +1,18 @@
 [
   {
-    "group": "Languages",
-    "items": ["Go", "TypeScript", "Python", "Rust", "SQL", "Bash"]
+    "group": "Applied AI",
+    "items": ["AWS Bedrock", "Anthropic Claude", "A2A orchestration", "Model Context Protocol", "RAG (Kendra, Bedrock Knowledge Bases)", "Claude Code", "Kiro CLI & Kiro Crew"]
   },
   {
-    "group": "Systems & Data",
-    "items": ["PostgreSQL", "Kafka", "Redis", "ClickHouse", "gRPC", "Elasticsearch"]
+    "group": "Leadership",
+    "items": ["Org building & scaling", "Hiring & interview design", "Coaching to promotion", "Executive stakeholder management", "Multi-product roadmap ownership"]
   },
   {
-    "group": "Infrastructure",
-    "items": ["Kubernetes", "Terraform", "AWS", "Docker", "GitHub Actions", "OpenTelemetry"]
+    "group": "Engineering",
+    "items": ["AWS", "Java", "TypeScript", "JavaScript", "Android", "React & React Native", "HTML/CSS", "Distributed consumer systems"]
   },
   {
-    "group": "Frontend",
-    "items": ["React", "Next.js", "Tailwind CSS", "Vite", "Playwright"]
+    "group": "Reliability & Evals",
+    "items": ["Usability benchmarking", "AI-driven E2E regression", "Model degradation instrumentation", "Fallback & safe-regression design", "Load testing", "On-call & incident response"]
   }
 ]
