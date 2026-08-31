@@ -370,3 +370,51 @@ body {
   .promo { justify-items: start; padding-left: 40px; margin: -8px 0 18px; }
 }
 
+/* ------------------------------------------------------------------ source */
+.source {
+  min-height: 88vh; display: grid; place-items: center; text-align: center;
+  padding: clamp(60px, 12vh, 120px) var(--pad) clamp(60px, 14vh, 140px);
+}
+.source-inner { max-width: 560px; }
+.source h2 {
+  margin-top: 18px; font-weight: 300; letter-spacing: -0.02em;
+  font-size: clamp(26px, 4.6vw, 42px); line-height: 1.12;
+}
+.source p { margin-top: 16px; color: var(--cream-dim); line-height: 1.65; font-size: 15px; }
+.source-links { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 32px; }
+.source-links a {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--cream); text-decoration: none; padding: 12px 22px; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--glass);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  transition: border-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+.source-links a:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+
+.colophon {
+  padding: 0 var(--pad) calc(34px + env(safe-area-inset-bottom));
+  text-align: center; font-family: var(--mono); font-size: 10px;
+  letter-spacing: 0.24em; text-transform: uppercase; color: var(--cream-faint);
+}
+
+/* ------------------------------------------------------- skills / marquee */
+.skills { padding: clamp(40px, 8vh, 90px) var(--pad); }
+.skills-inner { max-width: 1040px; margin: 0 auto; }
+.skills-grid {
+  display: grid; gap: 1px; margin-top: 34px;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  background: var(--line-soft); border: 1px solid var(--line-soft); border-radius: 16px; overflow: hidden;
+}
+.skills-grid > div { background: rgba(5, 9, 15, 0.62); padding: 22px; backdrop-filter: blur(10px); }
+.skills-grid h3 {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--accent); font-weight: 500;
+}
+.skills-grid ul { list-style: none; margin: 14px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 7px; }
+.skills-grid li {
+  font-size: 13px; color: var(--cream-dim);
+  padding: 3px 0; margin-right: 4px;
+}
+.skills-grid li::after { content: "·"; margin-left: 8px; opacity: 0.4; }
+.skills-grid li:last-child::after { content: ""; }
+
