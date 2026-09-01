@@ -41,7 +41,7 @@ export default function Home() {
         <div className="skills-inner">
           <div className="section-head center">
             <span className="eyebrow">Toolkit</span>
-            <h2 id="skills-heading">The toolkit behind the org.</h2>
+            <h2 id="skills-heading">The toolkit used along the way.</h2>
           </div>
           <div className="skills-grid">
             {skills.map((g) => (
@@ -62,12 +62,9 @@ export default function Home() {
         <div className="source-inner">
           <span className="eyebrow">Get in touch</span>
           <h2 id="contact-heading">
-            {profile.available ? profile.availabilityNote : "Always happy to talk shop."}
+            {profile.available ? profile.availabilityNote : "Always happy to chat."}
           </h2>
-          <p>
-            The fastest way to reach me is email. I read everything, and I answer anything
-            that isn&rsquo;t a recruiter template.
-          </p>
+          <p>Fastest way to reach me is email.</p>
           <div className="source-links">
             {profile.links.map((l) => (
               <a
