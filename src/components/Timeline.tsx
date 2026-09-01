@@ -1,19 +1,16 @@
 import Link from "next/link";
 import type { CSSProperties } from "react";
-import type { Entry } from "@/lib/content";
+import type { Entry, SectionCopy } from "@/lib/content";
 
-export default function Timeline({ entries }: { entries: Entry[] }) {
+export default function Timeline({ entries, copy }: { entries: Entry[]; copy: SectionCopy }) {
   const firstEdu = entries.findIndex((e) => e.kind === "education");
 
   return (
     <section className="timeline" id="experience" aria-labelledby="experience-heading">
       <div className="tl-intro">
-        <span className="eyebrow">The path here</span>
-        <h2 id="experience-heading">Newest at the top, working backwards.</h2>
-        <p>
-          Twelve years in tech, eight of them building and leading teams, in reverse. Every step
-          down is a little further back toward where it started.
-        </p>
+        <span className="eyebrow">{copy.eyebrow}</span>
+        <h2 id="experience-heading">{copy.heading}</h2>
+        {copy.intro && <p>{copy.intro}</p>}
       </div>
 
       <div className="spine">

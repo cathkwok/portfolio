@@ -1,0 +1,50 @@
+import type { SkillGroup } from "./types";
+
+export const skills: SkillGroup[] = [
+  {
+    group: "Applied AI",
+    items: [
+      "AWS Bedrock",
+      "Anthropic Claude",
+      "A2A orchestration",
+      "Model Context Protocol",
+      "RAG (Kendra, Bedrock Knowledge Bases)",
+      "Claude Code",
+      "Kiro CLI & Kiro Crew",
+    ],
+  },
+  {
+    group: "Leadership",
+    items: [
+      "Org building & scaling",
+      "Hiring & interview design",
+      "Coaching to promotion",
+      "Executive stakeholder management",
+      "Multi-product roadmap ownership",
+    ],
+  },
+  {
+    group: "Engineering",
+    items: [
+      "AWS",
+      "Java",
+      "TypeScript",
+      "JavaScript",
+      "Android",
+      "React & React Native",
+      "HTML/CSS",
+      "Distributed consumer systems",
+    ],
+  },
+  {
+    group: "Reliability & Evals",
+    items: [
+      "Usability benchmarking",
+      "AI-driven E2E regression",
+      "Model degradation instrumentation",
+      "Fallback & safe-regression design",
+      "Load testing",
+      "On-call & incident response",
+    ],
+  },
+];

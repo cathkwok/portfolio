@@ -2,6 +2,7 @@ import Reveal from "@/components/Reveal";
 import Timeline from "@/components/Timeline";
 import WorkGrid from "@/components/WorkGrid";
 import {
+  getCopy,
   getEducation,
   getJobs,
   getProfile,
@@ -13,6 +14,7 @@ export default function Home() {
   const profile = getProfile();
   const projects = getProjects();
   const skills = getSkills();
+  const copy = getCopy();
   // The spine is the career itself; projects get their own grid above it.
   const path = [...getJobs(), ...getEducation()].sort((a, b) => a.order - b.order);
 
@@ -33,15 +35,15 @@ export default function Home() {
         </div>
       </section>
 
-      <WorkGrid projects={projects} />
+      <WorkGrid projects={projects} copy={copy.work} />
 
-      <Timeline entries={path} />
+      <Timeline entries={path} copy={copy.experience} />
 
       <section className="skills" aria-labelledby="skills-heading">
         <div className="skills-inner">
           <div className="section-head center">
-            <span className="eyebrow">Toolkit</span>
-            <h2 id="skills-heading">The toolkit behind the org.</h2>
+            <span className="eyebrow">{copy.toolkit.eyebrow}</span>
+            <h2 id="skills-heading">{copy.toolkit.heading}</h2>
           </div>
           <div className="skills-grid">
             {skills.map((g) => (
@@ -60,14 +62,11 @@ export default function Home() {
 
       <section className="source" id="contact" aria-labelledby="contact-heading">
         <div className="source-inner">
-          <span className="eyebrow">Get in touch</span>
+          <span className="eyebrow">{copy.contact.eyebrow}</span>
           <h2 id="contact-heading">
-            {profile.available ? profile.availabilityNote : "Always happy to talk shop."}
+            {profile.available ? profile.availabilityNote : copy.contact.fallbackHeading}
           </h2>
-          <p>
-            The fastest way to reach me is email. I read everything, and I answer anything
-            that isn&rsquo;t a recruiter template.
-          </p>
+          <p>{copy.contact.note}</p>
           <div className="source-links">
             {profile.links.map((l) => (
               <a
@@ -84,9 +83,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="colophon">
-        {profile.name} — built with Next.js. Content lives in src/data/resume.ts.
-      </footer>
+      <footer className="colophon">{copy.footer}</footer>
 
       <Reveal />
     </main>

@@ -1,19 +1,21 @@
 import { cache } from "react";
 import { marked } from "marked";
-import {
-  personal as rawPersonal,
-  profile as rawProfile,
-  skills as rawSkills,
-  timeline as rawTimeline,
-  type Kind,
-  type Link,
-  type Metric,
-  type Personal,
-  type Profile,
-  type SkillGroup,
-} from "@/data/resume";
+import { pageCopy } from "@/data/copy";
+import { personal as rawPersonal, profile as rawProfile } from "@/data/profile";
+import { skills as rawSkills } from "@/data/skills";
+import { timeline as rawTimeline } from "@/data/timeline";
+import type {
+  Kind,
+  Link,
+  Metric,
+  PageCopy,
+  Personal,
+  Profile,
+  SectionCopy,
+  SkillGroup,
+} from "@/data/types";
 
-export type { Kind, Link, Metric, Personal, Profile, SkillGroup };
+export type { Kind, Link, Metric, PageCopy, Personal, Profile, SectionCopy, SkillGroup };
 
 export type Entry = {
   order: number;
@@ -46,6 +48,7 @@ export type Entry = {
 export const getProfile = cache((): Profile => rawProfile);
 export const getSkills = cache((): SkillGroup[] => rawSkills);
 export const getPersonal = cache((): Personal => rawPersonal);
+export const getCopy = cache((): PageCopy => pageCopy);
 
 export const getTimeline = cache((): Entry[] => {
   const entries = rawTimeline.map((e) => {

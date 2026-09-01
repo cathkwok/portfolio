@@ -1,22 +1,19 @@
 import Link from "next/link";
 import type { CSSProperties } from "react";
-import type { Entry } from "@/lib/content";
+import type { Entry, SectionCopy } from "@/lib/content";
 
 function accentVar(accent: string) {
   return { "--dot": accent } as CSSProperties;
 }
 
-export default function WorkGrid({ projects }: { projects: Entry[] }) {
+export default function WorkGrid({ projects, copy }: { projects: Entry[]; copy: SectionCopy }) {
   return (
     <section className="work" id="work" aria-labelledby="work-heading">
       <div className="work-inner">
         <div className="section-head">
-          <span className="eyebrow">Signature initiatives</span>
-          <h2 id="work-heading">What I&rsquo;ve led, and what it took to scale it.</h2>
-          <p>
-            Each one has a write-up: the problem, how the team and the product grew together,
-            and what I&rsquo;d do differently now.
-          </p>
+          <span className="eyebrow">{copy.eyebrow}</span>
+          <h2 id="work-heading">{copy.heading}</h2>
+          {copy.intro && <p>{copy.intro}</p>}
         </div>
 
         <div className="work-grid">
