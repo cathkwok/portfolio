@@ -57,6 +57,11 @@ export type Profile = {
 
 export type SkillGroup = { group: string; items: string[] };
 
+export type Personal = {
+  lede: string;
+  crafts: string[];
+};
+
 export const profile: Profile = {
   "name": "Cathy Kwok",
   "initials": "CK",
@@ -84,6 +89,11 @@ export const profile: Profile = {
     }
   ],
   "resumeUrl": ""
+};
+
+export const personal: Personal = {
+  "lede": "Home base is Seattle, where I'm a parent to two wonderful kids. When I'm not building, you'll find me walking the dog, sailing with my husband, or hosting a dinner party for friends.",
+  "crafts": ["Crochet", "Knitting", "Watercolor", "Paper flowers", "Embroidery"]
 };
 
 export const skills: SkillGroup[] = [
