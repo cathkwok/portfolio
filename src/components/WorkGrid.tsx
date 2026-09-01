@@ -1,0 +1,58 @@
+import Link from "next/link";
+import type { CSSProperties } from "react";
+import type { Entry } from "@/lib/content";
+
+function accentVar(accent: string) {
+  return { "--dot": accent } as CSSProperties;
+}
+
+export default function WorkGrid({ projects }: { projects: Entry[] }) {
+  return (
+    <section className="work" id="work" aria-labelledby="work-heading">
+      <div className="work-inner">
+        <div className="section-head">
+          <span className="eyebrow">Selected work</span>
+          <h2 id="work-heading">What I&rsquo;ve led, and what it took to scale it.</h2>
+          <p>The story behind each one — what broke, what we built, and how it scaled.</p>
+        </div>
+
+        <div className="work-grid">
+          {projects.map((p) => (
+            <article key={p.slug} className="wcard" style={accentVar(p.accent)}>
+              <div className="meta">
+                <span className="org">{p.org}</span>
+                <span>{p.dateLabel}</span>
+              </div>
+
+              <h3>
+                {p.hasDetail ? <Link href={`/work/${p.slug}`}>{p.title}</Link> : p.title}
+              </h3>
+              <p className="blurb">{p.blurb}</p>
+
+              {/* one headline number per card; the full set lives on the detail page */}
+              {p.metrics.length > 0 && (
+                <p className="wstat">
+                  <span className="v">{p.metrics[0].value}</span> {p.metrics[0].label.toLowerCase()}
+                </p>
+              )}
+
+              <div className="tags">
+                {p.tags.slice(0, 3).map((t) => (
+                  <b key={t}>{t}</b>
+                ))}
+              </div>
+
+              <div className="foot">
+                {p.hasDetail && (
+                  <span className="more">
+                    Read the write-up <span aria-hidden="true">→</span>
+                  </span>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
