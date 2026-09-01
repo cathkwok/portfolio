@@ -25,7 +25,7 @@ export default function Nav({ initials }: { initials: string }) {
   return (
     <nav className={`topnav${open ? " open" : ""}`} aria-label="Primary">
       <Link href="/" className="brand">
-        {initials}
+        <span aria-hidden="true">&#9875;</span> {initials}
       </Link>
 
       <button
