@@ -52,7 +52,6 @@ export type Profile = {
   availabilityNote: string;
   bio: string[];
   links: (Link & { handle: string })[];
-  resumeUrl: string;
 };
 
 export type SkillGroup = { group: string; items: string[] };
@@ -82,8 +81,7 @@ export const profile: Profile = {
       "href": "mailto:cathykwok13@gmail.com",
       "handle": "cathykwok13@gmail.com"
     }
-  ],
-  "resumeUrl": ""
+  ]
 };
 
 export const skills: SkillGroup[] = [

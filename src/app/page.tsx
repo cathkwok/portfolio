@@ -85,7 +85,7 @@ export default function Home() {
       </section>
 
       <footer className="colophon">
-        {profile.name} — built with Next.js. Content lives in /content.
+        {profile.name} — built with Next.js. Content lives in src/data/resume.ts.
       </footer>
 
       <Reveal />

@@ -84,7 +84,7 @@ export default async function WorkDetail({ params }: Props) {
           </ul>
         )}
 
-        {/* Body is authored locally in /content — trusted markdown, not user input. */}
+        {/* Body is authored locally in src/data/resume.ts — trusted markdown, not user input. */}
         <div className="prose" dangerouslySetInnerHTML={{ __html: entry.html }} />
 
         {(prev || next) && (
