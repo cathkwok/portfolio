@@ -1,18 +1,17 @@
-import fs from "node:fs";
-import path from "node:path";
 import { cache } from "react";
-import matter from "gray-matter";
 import { marked } from "marked";
+import {
+  profile as rawProfile,
+  skills as rawSkills,
+  timeline as rawTimeline,
+  type Kind,
+  type Link,
+  type Metric,
+  type Profile,
+  type SkillGroup,
+} from "@/data/resume";
 
-/**
- * Everything on this site is read from /content at build time. Adding a role,
- * a project, or a skill means adding or editing a file there — never a component.
- */
-const CONTENT_DIR = path.join(process.cwd(), "content");
-
-export type Link = { label: string; href: string };
-export type Metric = { label: string; value: string };
-export type Kind = "job" | "project" | "education";
+export type { Kind, Link, Metric, Profile, SkillGroup };
 
 export type Entry = {
   order: number;
@@ -42,62 +41,18 @@ export type Entry = {
   resume: boolean;
 };
 
-export type Profile = {
-  name: string;
-  initials: string;
-  role: string;
-  tagline: string;
-  location: string;
-  email: string;
-  available: boolean;
-  availabilityNote: string;
-  bio: string[];
-  links: (Link & { handle: string })[];
-  resumeUrl: string;
-};
-
-export type SkillGroup = { group: string; items: string[] };
-
-function readJson<T>(file: string): T {
-  return JSON.parse(fs.readFileSync(path.join(CONTENT_DIR, file), "utf8")) as T;
-}
-
-export const getProfile = cache((): Profile => readJson<Profile>("profile.json"));
-export const getSkills = cache((): SkillGroup[] => readJson<SkillGroup[]>("skills.json"));
+export const getProfile = cache((): Profile => rawProfile);
+export const getSkills = cache((): SkillGroup[] => rawSkills);
 
 export const getTimeline = cache((): Entry[] => {
-  const dir = path.join(CONTENT_DIR, "timeline");
-  const entries = fs
-    .readdirSync(dir)
-    .filter((f) => f.endsWith(".md"))
-    .map((file) => {
-      const raw = fs.readFileSync(path.join(dir, file), "utf8");
-      const { data, content } = matter(raw);
-      const body = content.trim();
-
-      return {
-        order: Number(data.order ?? 999),
-        kind: (data.kind ?? "project") as Kind,
-        slug: String(data.slug ?? file.replace(/^\d+-/, "").replace(/\.md$/, "")),
-        title: String(data.title ?? ""),
-        org: String(data.org ?? ""),
-        location: String(data.location ?? ""),
-        dateLabel: String(data.dateLabel ?? ""),
-        sideLabel: String(data.sideLabel ?? ""),
-        blurb: String(data.blurb ?? ""),
-        tags: (data.tags ?? []) as string[],
-        stack: (data.stack ?? []) as string[],
-        accent: String(data.accent || "#e3c58f"),
-        featured: Boolean(data.featured),
-        promotion: Boolean(data.promotion),
-        metrics: (data.metrics ?? []) as Metric[],
-        links: (data.links ?? []) as Link[],
-        highlights: (data.highlights ?? []) as string[],
-        html: body ? (marked.parse(body, { async: false }) as string) : "",
-        hasDetail: body.length > 0,
-        resume: data.resume !== false,
-      } satisfies Entry;
-    });
+  const entries = rawTimeline.map((e) => {
+    const body = e.body.trim();
+    return {
+      ...e,
+      html: body ? (marked.parse(body, { async: false }) as string) : "",
+      hasDetail: body.length > 0,
+    } satisfies Entry;
+  });
 
   // order 1 is the most recent; higher numbers go further back in time.
   return entries.sort((a, b) => a.order - b.order);
