@@ -69,11 +69,11 @@ export const profile: Profile = {
   "location": "Seattle, WA",
   "email": "cathykwok13@gmail.com",
   "available": true,
-  "availabilityNote": "Open to senior engineering leadership roles",
+  "availabilityNote": "Reach out and connect!",
   "bio": [
-    "Engineering leader with 12 years in tech and 8 years building teams. I've scaled consumer platforms from experiment to hyperscale — 300M+ monthly users at IMDb — and today lead applied GenAI and developer tooling at Amazon, where the org I built took an internal AI documentation platform to roughly 40% of the company's knowledge workers.",
-    "I stay hands-on. Most of my own building happens in a terminal: agentic architectures, agent-to-agent orchestration, evals, and the degradation instrumentation that keeps LLM features honest in production. I think the most useful thing a manager can do right now is keep enough of a practice to know what's actually hard.",
-    "Before this: identity and trust at Affirm, aws.amazon.com, grocery fulfillment for the Amazon Fresh launch, and a caller-ID Android app with 5M downloads."
+    "AI-native leader with 12 years of experience and 8 years of direct people management, specializing in scaling hyperscale platforms (300M+ users) and applied AI solutions.",
+    "I bridge the gap between technical architecture and product strategy, managing high-performance teams through ambiguity while maintaining hands-on involvement in complex problem solving.",
+    "I am passionate about building highly collaborative team environments and excited about how we can accelerate solving real customer problems with applied AI."
   ],
   "links": [
     {
@@ -90,7 +90,7 @@ export const profile: Profile = {
 };
 
 export const personal: Personal = {
-  "lede": "Home base is Seattle, where I'm a parent to two wonderful kids. When I'm not building, you'll find me walking the dog, sailing with my husband, or hosting a dinner party for friends.",
+  "lede": "Home base is Seattle, where I am a mom to two wonderful kids. When I'm not building, you'll find me walking the dog, sailing with my husband, hosting a dinner party for friends, or taking up yet another crafting hobby",
   "crafts": ["Crochet", "Knitting", "Watercolor", "Paper flowers", "Embroidery"]
 };
 
@@ -135,8 +135,6 @@ export const skills: SkillGroup[] = [
     "items": [
       "Usability benchmarking",
       "AI-driven E2E regression",
-      "Model degradation instrumentation",
-      "Fallback & safe-regression design",
       "Load testing",
       "On-call & incident response"
     ]
@@ -153,7 +151,7 @@ export const timeline: TimelineEntry[] = [
     "location": "",
     "dateLabel": "Sep 2025 – now",
     "sideLabel": "2025 – now",
-    "blurb": "An internal AI documentation platform I took from a community side project to a resilient, enterprise-tier tool used by roughly 40% of Amazon's knowledge workers.",
+    "blurb": "An internal AI documentation platform I took from a community side project to a resilient, enterprise-tier tool used by roughly 125K Monthly Active Users",
     "tags": [
       "Applied AI",
       "Platform",
@@ -216,68 +214,6 @@ I also built a community contribution framework that prioritized customer-impact
   },
   {
     "order": 2,
-    "kind": "project",
-    "slug": "agentic-developer-tools",
-    "title": "Agentic Developer Tools & A2A Framework",
-    "org": "Amazon · StoreGen",
-    "location": "",
-    "dateLabel": "Apr 2025 – now",
-    "sideLabel": "2025 – now",
-    "blurb": "Foundational R&D on autonomous developer agents — an Agent-to-Agent orchestration framework that has since driven 100,000+ code reviews org-wide.",
-    "tags": [
-      "Applied AI",
-      "Agents",
-      "R&D"
-    ],
-    "stack": [
-      "AWS Bedrock",
-      "Anthropic Claude",
-      "A2A protocol",
-      "MCP"
-    ],
-    "accent": "#7fc8d4",
-    "featured": true,
-    "promotion": false,
-    "resume": true,
-    "metrics": [
-      {
-        "label": "Code reviews driven",
-        "value": "100,000+"
-      },
-      {
-        "label": "Org rank on deployments",
-        "value": "Top 3 of ~2,000"
-      }
-    ],
-    "links": [],
-    "highlights": [
-      "Architected and hand-coded an A2A (Agent-to-Agent) orchestration framework powering an oncall agent and a service-based call agent",
-      "Directed an async code-generation agent, connected via A2A to a teammate agent and a web-based prompt UX",
-      "Built a deployment-pipeline health agent as part of a broader bet on AI-native operational tooling",
-      "Built a weekly demo and knowledge-sharing culture from the ground up that made the team the org leader in AI tooling adoption"
-    ],
-  body: `
-## Betting on agents before it was obvious
-
-In early 2025, "developer agents" was still mostly a research conversation. I took a bet on it as an operational one: could an agent-to-agent architecture actually take real load off engineers doing code review, oncall, and deployment triage — not as a demo, but as daily infrastructure.
-
-## What got built
-
-The core is an A2A (Agent-to-Agent) orchestration framework I personally architected and hand-coded early on, before handing pieces off as the team grew. On top of it: an oncall agent, a service-based call agent, an async code-generation agent wired to a teammate agent and a web-based prompt interface, and a deployment-pipeline health agent exploring what AI-native operational tooling could look like.
-
-I stayed close to the code on this one deliberately. Terminal-driven development — CLI tools as the primary working surface rather than a side habit — is how I kept enough hands-on fluency to make credible calls on the team's technical direction, and to know which agent ideas were worth funding and which weren't.
-
-## Culture, not just code
-
-The technical work mattered less than whether the team could keep learning faster than the field was moving. I built a weekly demo and knowledge-sharing habit from scratch specifically to force that pace — every agent experiment, successful or not, got shown to the group. That habit is most of why the team leads the org in AI tooling adoption and ranks top 3 of roughly 2,000 engineers org-wide on normalized deployments.
-
-## Result
-
-The code-generation agent alone has driven over 100,000 code reviews org-wide to date — foundational R&D that outgrew the team that built it.
-  `,
-  },
-  {
-    "order": 3,
     "kind": "job",
     "slug": "storegen-sdm",
     "title": "Software Development Manager, StoreGen (Applied GenAI & Developer Tools)",
@@ -307,7 +243,7 @@ The code-generation agent alone has driven over 100,000 code reviews org-wide to
   body: "",
   },
   {
-    "order": 4,
+    "order": 3,
     "kind": "job",
     "slug": "imdb-sdm",
     "title": "Software Development Manager, IMDb",
@@ -336,7 +272,7 @@ The code-generation agent alone has driven over 100,000 code reviews org-wide to
   body: "",
   },
   {
-    "order": 5,
+    "order": 4,
     "kind": "job",
     "slug": "affirm-em",
     "title": "Engineering Manager, Identity Experience (Trust & Safety)",
@@ -364,7 +300,7 @@ The code-generation agent alone has driven over 100,000 code reviews org-wide to
   body: "",
   },
   {
-    "order": 6,
+    "order": 5,
     "kind": "job",
     "slug": "aws-marketing-sdm",
     "title": "Software Development Manager, AWS Marketing Website Engineering",
@@ -392,7 +328,7 @@ The code-generation agent alone has driven over 100,000 code reviews org-wide to
   body: "",
   },
   {
-    "order": 7,
+    "order": 6,
     "kind": "job",
     "slug": "f3-sdm",
     "title": "Software Development Manager, Fresh Food Fast (F3) Grocery Fulfillment",
@@ -419,7 +355,7 @@ The code-generation agent alone has driven over 100,000 code reviews org-wide to
   body: "",
   },
   {
-    "order": 8,
+    "order": 7,
     "kind": "job",
     "slug": "prime-now-sde",
     "title": "Software Development Engineer, Prime Now Mobile",
@@ -446,7 +382,7 @@ The code-generation agent alone has driven over 100,000 code reviews org-wide to
   body: "",
   },
   {
-    "order": 9,
+    "order": 8,
     "kind": "job",
     "slug": "hiya-inc",
     "title": "Software Engineer",
@@ -472,7 +408,7 @@ The code-generation agent alone has driven over 100,000 code reviews org-wide to
   body: "",
   },
   {
-    "order": 10,
+    "order": 9,
     "kind": "job",
     "slug": "whitepages",
     "title": "Software Engineer",
@@ -498,7 +434,7 @@ The code-generation agent alone has driven over 100,000 code reviews org-wide to
   body: "",
   },
   {
-    "order": 11,
+    "order": 10,
     "kind": "job",
     "slug": "ubc-teaching-assistant",
     "title": "Undergraduate Teaching Assistant",
@@ -521,7 +457,7 @@ The code-generation agent alone has driven over 100,000 code reviews org-wide to
   body: "",
   },
   {
-    "order": 12,
+    "order": 11,
     "kind": "job",
     "slug": "clinemetrica",
     "title": "Software Developer / Intern",
@@ -556,7 +492,7 @@ The code-generation agent alone has driven over 100,000 code reviews org-wide to
   body: "",
   },
   {
-    "order": 13,
+    "order": 12,
     "kind": "job",
     "slug": "seamless-mobile-health",
     "title": "Contract Mobile Developer",
@@ -590,7 +526,7 @@ The code-generation agent alone has driven over 100,000 code reviews org-wide to
   body: "",
   },
   {
-    "order": 14,
+    "order": 13,
     "kind": "job",
     "slug": "plentyoffish",
     "title": "Co-op Software Engineer",
@@ -620,7 +556,7 @@ The code-generation agent alone has driven over 100,000 code reviews org-wide to
   body: "",
   },
   {
-    "order": 15,
+    "order": 14,
     "kind": "job",
     "slug": "ubc-pharmacy-residency",
     "title": "Volunteer Web Programmer",
@@ -651,7 +587,7 @@ The code-generation agent alone has driven over 100,000 code reviews org-wide to
   body: "",
   },
   {
-    "order": 16,
+    "order": 15,
     "kind": "job",
     "slug": "ubc-bioinformatics-research",
     "title": "Bioinformatics Research Assistant",
@@ -675,7 +611,7 @@ The code-generation agent alone has driven over 100,000 code reviews org-wide to
   body: "",
   },
   {
-    "order": 17,
+    "order": 16,
     "kind": "education",
     "slug": "ubc",
     "title": "B.S., Combined Computer Science and Biology",
