@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PrintButton from "@/components/PrintButton";
+import SavePdfButton from "@/components/SavePdfButton";
 import {
   getEducation,
   getProfile,
@@ -44,7 +44,7 @@ export default function Resume() {
           </div>
         </header>
 
-        <PrintButton />
+        <SavePdfButton />
 
         <section className="rsection">
           <h2>Summary</h2>

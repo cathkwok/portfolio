@@ -9,10 +9,10 @@ export default function Timeline({ entries }: { entries: Entry[] }) {
     <section className="timeline" id="experience" aria-labelledby="experience-heading">
       <div className="tl-intro">
         <span className="eyebrow">The path here</span>
-        <h2 id="experience-heading">Newest at the top, working backwards.</h2>
+        <h2 id="experience-heading">How I got here.</h2>
         <p>
-          Twelve years in tech, eight of them building and leading teams, in reverse. Every step
-          down is a little further back toward where it started.
+          Twelve years in tech, eight of them building and leading teams — read from the top
+          down, most recent first.
         </p>
       </div>
 

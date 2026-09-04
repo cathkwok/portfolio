@@ -13,10 +13,7 @@ export default function WorkGrid({ projects }: { projects: Entry[] }) {
         <div className="section-head">
           <span className="eyebrow">Signature initiatives</span>
           <h2 id="work-heading">What I&rsquo;ve led, and what it took to scale it.</h2>
-          <p>
-            Each one has a write-up: the problem, how the team and the product grew together,
-            and what I&rsquo;d do differently now.
-          </p>
+          <p>The story behind each one — what broke, what we built, what I&rsquo;d do differently.</p>
         </div>
 
         <div className="work-grid">
