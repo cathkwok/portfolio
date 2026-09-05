@@ -1,17 +1,9 @@
 import { cache } from "react";
 import { marked } from "marked";
-import {
-  personal as rawPersonal,
-  profile as rawProfile,
-  skills as rawSkills,
-  timeline as rawTimeline,
-  type Kind,
-  type Link,
-  type Metric,
-  type Personal,
-  type Profile,
-  type SkillGroup,
-} from "@/data/resume";
+import { personal as rawPersonal, profile as rawProfile } from "@/data/profile";
+import { skills as rawSkills } from "@/data/skills";
+import { timeline as rawTimeline } from "@/data/timeline";
+import type { Kind, Link, Metric, Personal, Profile, SkillGroup } from "@/data/types";
 
 export type { Kind, Link, Metric, Personal, Profile, SkillGroup };
 
