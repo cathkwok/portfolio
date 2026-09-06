@@ -243,6 +243,33 @@ I also built a community contribution framework that prioritized customer-impact
   body: "",
   },
   {
+    "order": 2.4,
+    "kind": "project",
+    "slug": "imdb-awards-season-readiness",
+    "title": "IMDb Awards Season Readiness",
+    "org": "Amazon · IMDb",
+    "location": "",
+    "dateLabel": "Aug 2022 – Apr 2025",
+    "sideLabel": "2022 – 2025",
+    "blurb": "Coordinated cross-team technical readiness for IMDb's biggest awards-season moments — the Oscars, Emmys, and Golden Globes.",
+    "tags": [
+      "Readiness",
+      "Awards season",
+      "Cross-team"
+    ],
+    "stack": [],
+    "accent": "#6fb8c9",
+    "featured": false,
+    "promotion": false,
+    "resume": true,
+    "metrics": [],
+    "links": [],
+    "highlights": [
+      "Led cross-team technical readiness across all 15 IMDb engineering teams for major film and TV award season launches — the platform's highest-traffic annual events"
+    ],
+  body: "",
+  },
+  {
     "order": 3,
     "kind": "job",
     "slug": "imdb-sdm",
