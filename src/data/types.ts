@@ -47,3 +47,14 @@ export type Personal = {
   lede: string;
   crafts: string[];
 };
+
+/** Copy for a section header: the small eyebrow label, the heading, and an optional intro line. */
+export type SectionCopy = { eyebrow: string; heading: string; intro?: string };
+
+export type PageCopy = {
+  work: SectionCopy;
+  experience: SectionCopy;
+  toolkit: SectionCopy;
+  contact: { eyebrow: string; fallbackHeading: string; note: string };
+  footer: string;
+};
