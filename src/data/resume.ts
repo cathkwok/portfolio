@@ -183,10 +183,8 @@ export const timeline: TimelineEntry[] = [
     ],
     "links": [],
     "highlights": [
-      "Grew the team from 7 to 13 engineers, hiring the entire group and coaching new hires to mid-level — one engineer is on track for Senior Engineer within 6 months",
-      "Led a major editor revamp plus rollout of accessibility features, real-time collaboration, spreadsheet support, agentic tools, and a review mode",
-      "Built proprietary usability benchmarking and an AI-driven end-to-end regression suite to validate product decisions before they shipped",
-      "Instrumented model and feature degradation detection, with fallback and safe-regression logic between the document store and agentic features"
+      "Grew the team from 7 to 13 engineers",
+      "Led a major editor revamp plus rollout of accessibility features, real-time collaboration, spreadsheet support, agentic tools, and a review mode"
     ],
   body: `
 ## From side project to platform
@@ -197,7 +195,7 @@ The work was equal parts platform engineering and product management: nothing he
 
 ## Team and delivery
 
-I grew the team from 7 to 13 engineers over about a year, hiring nearly the entire group myself and building a coaching structure formal enough that new hires had a real path from intern-level to mid-level to senior — one engineer is on track for Senior Engineer within six months of dedicated coaching.
+I grew the team from 7 to 13 engineers over about a year.
 
 On the product side, a major editor revamp shipped alongside accessibility features, real-time collaboration, spreadsheet support, agentic tools, and a review mode. None of it landed in isolation — it landed because the team could load-test for enterprise-scale reliability and had degradation instrumentation and fallback logic in place before traffic caught up with ambition.
 
@@ -205,7 +203,7 @@ On the product side, a major editor revamp shipped alongside accessibility featu
 
 The hardest part of running an AI product internally isn't the product — it's that the tools underneath it keep changing out from under you. As usage patterns shifted (users migrating from one CLI tool to another, for instance), I kept feature parity intact through the Pippin MCP integration layer rather than chasing each migration with a rewrite.
 
-I also built a community contribution framework that prioritized customer-impacting features and accelerated the convergence of what had been several competing internal tools into one. Consolidation is unglamorous work, and it's usually the difference between a platform and a pile of side projects.
+I also led a community contribution framework that prioritized customer-impacting features and accelerated the convergence of what had been several competing internal tools into one. Consolidation is unglamorous work, and it's usually the difference between a platform and a pile of side projects.
 
 ## Result
 
