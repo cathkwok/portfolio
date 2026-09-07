@@ -75,6 +75,9 @@ export const getEducation = cache((): Entry[] => getTimeline().filter((e) => e.k
 /** Full-time roles only — leaves early-career internships out of the printable resume. */
 export const getResumeJobs = cache((): Entry[] => getJobs().filter((e) => e.resume));
 
+/** Leaves unpolished/placeholder project cards off the printable resume. */
+export const getResumeProjects = cache((): Entry[] => getProjects().filter((e) => e.resume));
+
 export const getDetailEntries = cache((): Entry[] => getTimeline().filter((e) => e.hasDetail));
 
 export function getEntry(slug: string): Entry | undefined {
