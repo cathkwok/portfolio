@@ -426,6 +426,32 @@ I also built a community contribution framework that prioritized customer-impact
   body: "",
   },
   {
+    "order": 5.4,
+    "kind": "project",
+    "slug": "fresh-associate-tooling",
+    "title": "Grocery Store Associate Tooling",
+    "org": "Amazon · Fresh Food Fast (F3)",
+    "location": "",
+    "dateLabel": "Mar 2018 – Nov 2019",
+    "sideLabel": "2018 – 2019",
+    "blurb": "Built inbound fulfillment tools used daily by associates and managers in Prime Now and Amazon Fresh fulfillment centers — designing for a physical-operations environment far from a typical software workflow.",
+    "tags": [
+      "Fulfillment",
+      "Operations tooling"
+    ],
+    "stack": [],
+    "accent": "#c98bb9",
+    "featured": false,
+    "promotion": false,
+    "resume": true,
+    "metrics": [],
+    "links": [],
+    "highlights": [
+      "Partnered cross-functionally on outbound pick tools for the Amazon Fresh grocery store launch across 7+ countries and 100+ fulfillment centers"
+    ],
+  body: "",
+  },
+  {
     "order": 6,
     "kind": "job",
     "slug": "f3-sdm",
