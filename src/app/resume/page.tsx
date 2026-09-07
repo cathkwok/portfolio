@@ -3,8 +3,8 @@ import SavePdfButton from "@/components/SavePdfButton";
 import {
   getEducation,
   getProfile,
-  getProjects,
   getResumeJobs,
+  getResumeProjects,
   getSkills,
 } from "@/lib/content";
 
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function Resume() {
   const profile = getProfile();
   const jobs = getResumeJobs();
-  const projects = getProjects();
+  const projects = getResumeProjects();
   const education = getEducation();
   const skills = getSkills();
 
