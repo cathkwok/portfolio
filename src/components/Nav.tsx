@@ -25,7 +25,18 @@ export default function Nav({ initials }: { initials: string }) {
   return (
     <nav className={`topnav${open ? " open" : ""}`} aria-label="Primary">
       <Link href="/" className="brand">
-        <span aria-hidden="true">&#9875;</span> {initials}
+        <span aria-hidden="true">
+          <svg viewBox="0 0 16 16" width="13" height="13" fill="none">
+            <circle cx="8" cy="8" r="6.4" stroke="currentColor" strokeWidth="1" />
+            <path d="M8 2.4 9.4 8 8 13.6 6.6 8Z" fill="currentColor" />
+            <path
+              d="M2.4 8 8 6.6 13.6 8 8 9.4Z"
+              fill="currentColor"
+              opacity="0.55"
+            />
+          </svg>
+        </span>{" "}
+        {initials}
       </Link>
 
       <button

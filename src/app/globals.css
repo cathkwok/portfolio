@@ -113,7 +113,10 @@ body {
 }
 .topnav a { color: inherit; text-decoration: none; }
 .topnav .brand { font-weight: 600; letter-spacing: 0.24em; }
-.topnav .brand span { color: var(--accent); opacity: 0.9; }
+.topnav .brand span {
+  display: inline-flex; align-items: center; position: relative; top: -1px;
+  color: var(--accent); opacity: 0.9;
+}
 .topnav .links { display: flex; gap: 22px; }
 .topnav .links a { opacity: 0.8; transition: opacity 0.2s ease; }
 .topnav .links a:hover { opacity: 1; }
