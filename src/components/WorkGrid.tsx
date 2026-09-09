@@ -29,18 +29,6 @@ export default function WorkGrid({ projects }: { projects: Entry[] }) {
               </h3>
               <p className="blurb">{p.blurb}</p>
 
-              {p.metrics.length > 0 && (
-                <div className="wmetrics">
-                  {/* two headline numbers per card; the rest live on the detail page */}
-                  {p.metrics.slice(0, 2).map((m) => (
-                    <div key={m.label}>
-                      <div className="v">{m.value}</div>
-                      <div className="k">{m.label}</div>
-                    </div>
-                  ))}
-                </div>
-              )}
-
               <div className="tags">
                 {p.tags.map((t) => (
                   <b key={t}>{t}</b>

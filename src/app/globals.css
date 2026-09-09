@@ -211,12 +211,12 @@ body {
 }
 .section-head p { margin-top: 15px; color: var(--cream-dim); line-height: 1.65; font-size: 15px; }
 
-.work-grid { display: grid; gap: clamp(16px, 2vw, 22px); grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); }
+.work-grid { display: grid; gap: clamp(14px, 1.6vw, 18px); grid-template-columns: repeat(auto-fit, minmax(258px, 1fr)); }
 
 .wcard {
   position: relative; display: flex; flex-direction: column;
-  padding: clamp(24px, 2.8vw, 32px);
-  background: var(--glass); border: 1px solid var(--line); border-radius: 24px;
+  padding: clamp(20px, 2.2vw, 26px);
+  background: var(--glass); border: 1px solid var(--line); border-radius: 20px;
   backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
   box-shadow: 0 24px 60px -44px rgba(0, 0, 0, 0.9);
   overflow: hidden; transition: border-color 0.3s ease, transform 0.3s ease;
@@ -239,25 +239,18 @@ body {
 }
 .wcard .meta .org { color: var(--dot, var(--accent)); }
 .wcard h3 {
-  margin-top: 14px; font-size: clamp(22px, 2.8vw, 27px); font-weight: 400;
-  letter-spacing: -0.022em; line-height: 1.15;
+  margin-top: 12px; font-size: clamp(19px, 2.2vw, 22px); font-weight: 400;
+  letter-spacing: -0.02em; line-height: 1.18;
 }
 .wcard h3 a { color: inherit; text-decoration: none; }
 .wcard h3 a::after { content: ""; position: absolute; inset: 0; }
 .wcard:hover h3 a { color: var(--dot, var(--accent)); }
-.wcard .blurb { margin-top: 13px; color: var(--cream-dim); font-size: 14.5px; line-height: 1.65; }
+.wcard .blurb {
+  margin-top: 10px; color: var(--cream-dim); font-size: 14px; line-height: 1.6;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+}
 
-.wmetrics {
-  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 22px;
-  padding-top: 20px; border-top: 1px solid var(--line-soft);
-}
-.wmetrics > div:only-child { grid-column: span 2; }
-.wmetrics .v { font-size: 19px; font-weight: 300; letter-spacing: -0.025em; color: var(--cream); }
-.wmetrics .k {
-  margin-top: 5px; font-family: var(--mono); font-size: 9px; letter-spacing: 0.18em;
-  text-transform: uppercase; color: var(--cream-faint);
-}
-.wcard .foot { margin-top: auto; padding-top: 22px; }
+.wcard .foot { margin-top: auto; padding-top: 18px; }
 .wcard .more {
   display: inline-flex; align-items: center; gap: 8px;
   font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
